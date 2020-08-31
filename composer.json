@@ -1,22 +1,24 @@
 {
-    "name": ":vendor_name/:package_name",
-    "description": ":package_description",
+    "name": "autoznetwork/autoznetwork-php",
+    "description": "autoZnetwork PHP Package",
     "keywords": [
-        ":vendor_name",
-        ":package_name"
+        "autoznetwork",
+        "autoznetwork-php"
     ],
-    "homepage": "https://github.com/spatie/:package_name",
+    "homepage": "https://github.com/autoznetwork/autoznetwork-php",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": ":author_email",
-            "homepage": "https://spatie.be",
+            "name": "Collin Pedersen",
+            "email": "collin@autoznetwork.com",
+            "homepage": "https://www.autoznetwork.com",
             "role": "Developer"
         }
     ],
     "require": {
-        "php": "^7.4"
+        "php": "^7.4",
+        "guzzlehttp/guzzle": "~6.0",
+        "ext-json": "*"
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^2.16",
@@ -25,12 +27,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Spatie\\Skeleton\\": "src"
+            "AutozNetwork\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Spatie\\Skeleton\\Tests\\": "tests"
+            "AutozNetwork\\Tests\\": "tests"
         }
     },
     "scripts": {
