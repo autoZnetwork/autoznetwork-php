@@ -2,6 +2,6 @@
 
 namespace AutozNetwork\Exception;
 
-use AutozNetwork\Exception\AutozNetworkException;
-
-class InternalErrorException extends AutozNetworkException { }
+class InternalErrorException extends AutozNetworkException
+{
+}

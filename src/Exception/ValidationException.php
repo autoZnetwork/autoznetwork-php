@@ -2,6 +2,6 @@
 
 namespace AutozNetwork\Exception;
 
-use AutozNetwork\Exception\AutozNetworkException;
-
-class ValidationException extends AutozNetworkException { }
+class ValidationException extends AutozNetworkException
+{
+}
