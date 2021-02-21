@@ -921,7 +921,7 @@ class Mimetypes
         'zip' => 'application/zip',
         'zir' => 'application/vnd.zul',
         'zirz' => 'application/vnd.zul',
-        'zmm' => 'application/vnd.handheld-entertainment+xml'
+        'zmm' => 'application/vnd.handheld-entertainment+xml',
     ];
 
     /**
@@ -932,7 +932,7 @@ class Mimetypes
      */
     public static function getInstance()
     {
-        if (!self::$instance) {
+        if (! self::$instance) {
             self::$instance = new self();
         }
 

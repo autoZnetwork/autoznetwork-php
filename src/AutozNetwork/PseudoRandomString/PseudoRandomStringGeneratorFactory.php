@@ -44,7 +44,7 @@ class PseudoRandomStringGeneratorFactory
      */
     public static function createPseudoRandomStringGenerator($generator)
     {
-        if (!$generator) {
+        if (! $generator) {
             return self::detectDefaultPseudoRandomStringGenerator();
         }
 
@@ -92,7 +92,7 @@ class PseudoRandomStringGeneratorFactory
             return new OpenSslPseudoRandomStringGenerator();
         }
 
-        if (!ini_get('open_basedir') && is_readable('/dev/urandom')) {
+        if (! ini_get('open_basedir') && is_readable('/dev/urandom')) {
             return new UrandomPseudoRandomStringGenerator();
         }
 

@@ -22,7 +22,7 @@ class PersistentDataFactory
      */
     public static function createPersistentDataHandler($handler)
     {
-        if (!$handler) {
+        if (! $handler) {
             return session_status() === PHP_SESSION_ACTIVE
                 ? new AutozNetworkSessionPersistentDataHandler()
                 : new AutozNetworkMemoryPersistentDataHandler();

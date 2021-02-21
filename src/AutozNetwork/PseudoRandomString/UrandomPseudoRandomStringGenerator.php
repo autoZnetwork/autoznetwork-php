@@ -27,7 +27,6 @@ use AutozNetwork\Exceptions\AutozNetworkSDKException;
 
 class UrandomPseudoRandomStringGenerator implements PseudoRandomStringGeneratorInterface
 {
-
     use PseudoRandomStringGeneratorTrait;
 
     /**
@@ -47,7 +46,7 @@ class UrandomPseudoRandomStringGenerator implements PseudoRandomStringGeneratorI
             );
         }
 
-        if (!is_readable('/dev/urandom')) {
+        if (! is_readable('/dev/urandom')) {
             throw new AutozNetworkSDKException(
                 static::ERROR_MESSAGE .
                 'Unable to read from /dev/urandom.'
@@ -63,21 +62,21 @@ class UrandomPseudoRandomStringGenerator implements PseudoRandomStringGeneratorI
         $this->validateLength($length);
 
         $stream = fopen('/dev/urandom', 'rb');
-        if (!is_resource($stream)) {
+        if (! is_resource($stream)) {
             throw new AutozNetworkSDKException(
                 static::ERROR_MESSAGE .
                 'Unable to open stream to /dev/urandom.'
             );
         }
 
-        if (!defined('HHVM_VERSION')) {
+        if (! defined('HHVM_VERSION')) {
             stream_set_read_buffer($stream, 0);
         }
 
         $binaryString = fread($stream, $length);
         fclose($stream);
 
-        if (!$binaryString) {
+        if (! $binaryString) {
             throw new AutozNetworkSDKException(
                 static::ERROR_MESSAGE .
                 'Stream to /dev/urandom returned no data.'

@@ -5,14 +5,13 @@ namespace AutozNetwork\Tests;
 use AutozNetwork\Authentication\AccessToken;
 use AutozNetwork\AutozNetwork;
 use AutozNetwork\AutozNetworkClient;
-use AutozNetwork\AutozNetworkRequest;
 //use AutozNetwork\GraphNodes\GraphEdge;
 //use AutozNetwork\Tests\Fixtures\FakeGraphApiForResumableUpload;
+use AutozNetwork\Exceptions\AutozNetworkSDKException;
 use AutozNetwork\Tests\Fixtures\FooBarPseudoRandomStringGenerator;
 use AutozNetwork\Tests\Fixtures\FooClientInterface;
 use AutozNetwork\Tests\Fixtures\FooPersistentDataInterface;
 use AutozNetwork\Tests\Fixtures\FooUrlDetectionInterface;
-use AutozNetwork\Exceptions\AutozNetworkSDKException;
 use InvalidArgumentException;
 use PHPUnit\Framework\TestCase;
 

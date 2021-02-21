@@ -2,9 +2,9 @@
 
 namespace AutozNetwork\HttpClients;
 
+use Exception;
 use GuzzleHttp\Client;
 use InvalidArgumentException;
-use Exception;
 
 class HttpClientsFactory
 {
@@ -25,7 +25,7 @@ class HttpClientsFactory
      */
     public static function createHttpClient($handler)
     {
-        if (!$handler) {
+        if (! $handler) {
             return self::detectDefaultClient();
         }
 
@@ -37,14 +37,14 @@ class HttpClientsFactory
             return new AutozNetworkStreamHttpClient();
         }
         if ('curl' === $handler) {
-            if (!extension_loaded('curl')) {
+            if (! extension_loaded('curl')) {
                 throw new Exception('The cURL extension must be loaded in order to use the "curl" handler.');
             }
 
             return new AutozNetworkCurlHttpClient();
         }
 
-        if ('guzzle' === $handler && !class_exists('GuzzleHttp\Client')) {
+        if ('guzzle' === $handler && ! class_exists('GuzzleHttp\Client')) {
             throw new Exception('The Guzzle HTTP client must be included in order to use the "guzzle" handler.');
         }
 

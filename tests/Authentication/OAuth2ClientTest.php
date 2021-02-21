@@ -2,9 +2,9 @@
 
 namespace AutozNetwork\Tests\Authentication;
 
+use AutozNetwork\Authentication\OAuth2Client;
 use AutozNetwork\AutozNetwork;
 use AutozNetwork\AutozNetworkApp;
-use AutozNetwork\Authentication\OAuth2Client;
 use PHPUnit\Framework\TestCase;
 
 class OAuth2ClientTest extends TestCase

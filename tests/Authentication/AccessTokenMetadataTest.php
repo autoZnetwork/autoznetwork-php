@@ -7,7 +7,6 @@ use PHPUnit\Framework\TestCase;
 
 class AccessTokenMetadataTest extends TestCase
 {
-
     protected $graphResponseData = [
         'data' => [
             'app_id' => '123',

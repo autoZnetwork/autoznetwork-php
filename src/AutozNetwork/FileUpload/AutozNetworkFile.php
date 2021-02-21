@@ -63,13 +63,13 @@ class AutozNetworkFile
      */
     public function open()
     {
-        if (!$this->isRemoteFile($this->path) && !is_readable($this->path)) {
+        if (! $this->isRemoteFile($this->path) && ! is_readable($this->path)) {
             throw new AutozNetworkSDKException('Failed to create AutozNetworkFile entity. Unable to read resource: ' . $this->path . '.');
         }
 
         $this->stream = fopen($this->path, 'r');
 
-        if (!$this->stream) {
+        if (! $this->stream) {
             throw new AutozNetworkSDKException('Failed to create AutozNetworkFile entity. Unable to open resource: ' . $this->path . '.');
         }
     }
@@ -139,7 +139,7 @@ class AutozNetworkFile
      *
      * @param string $pathToFile
      *
-     * @return boolean
+     * @return bool
      */
     protected function isRemoteFile($pathToFile)
     {

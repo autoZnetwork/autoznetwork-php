@@ -49,7 +49,7 @@ class AutozNetworkResponseException extends AutozNetworkSDKException
     {
         $data = $response->getDecodedBody();
 
-        if (!isset($data['error']['code']) && isset($data['code'])) {
+        if (! isset($data['error']['code']) && isset($data['code'])) {
             $data = ['error' => $data];
         }
 

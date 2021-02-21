@@ -90,7 +90,7 @@ class AccessToken
     /**
      * Checks the expiration of the access token.
      *
-     * @return boolean|null
+     * @return bool|null
      */
     public function isExpired()
     {

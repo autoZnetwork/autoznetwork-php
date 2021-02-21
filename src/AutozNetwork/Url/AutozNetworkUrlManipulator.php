@@ -86,7 +86,7 @@ class AutozNetworkUrlManipulator
     public static function getParamsAsArray($url)
     {
         $query = parse_url($url, PHP_URL_QUERY);
-        if (!$query) {
+        if (! $query) {
             return [];
         }
         $params = [];
@@ -109,7 +109,7 @@ class AutozNetworkUrlManipulator
     {
         $newParams = static::getParamsAsArray($urlToStealFrom);
         // Nothing new to add, return as-is
-        if (!$newParams) {
+        if (! $newParams) {
             return $urlToAddTo;
         }
 
@@ -125,7 +125,7 @@ class AutozNetworkUrlManipulator
      */
     public static function forceSlashPrefix($string)
     {
-        if (!$string) {
+        if (! $string) {
             return $string;
         }
 

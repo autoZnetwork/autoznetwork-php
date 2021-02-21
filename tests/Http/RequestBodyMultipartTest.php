@@ -2,10 +2,9 @@
 
 namespace AutozNetwork\Tests\Http;
 
-use AutozNetwork\Http\RequestBodyMultipart;
 use AutozNetwork\FileUpload\AutozNetworkFile;
+use AutozNetwork\Http\RequestBodyMultipart;
 use PHPUnit\Framework\TestCase;
-
 
 class RequestBodyMultipartTest extends TestCase
 {

@@ -164,7 +164,7 @@ class AutozNetworkResponse
     /**
      * Returns true if Graph returned an error message.
      *
-     * @return boolean
+     * @return bool
      */
     public function isError()
     {
@@ -226,7 +226,7 @@ class AutozNetworkResponse
             $this->decodedBody = ['id' => $this->decodedBody];
         }
 
-        if (!is_array($this->decodedBody)) {
+        if (! is_array($this->decodedBody)) {
             $this->decodedBody = [];
         }
 

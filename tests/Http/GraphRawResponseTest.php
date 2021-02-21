@@ -7,7 +7,6 @@ use PHPUnit\Framework\TestCase;
 
 class GraphRawResponseTest extends TestCase
 {
-
     protected $fakeRawProxyHeader = "HTTP/1.0 200 Connection established
 Proxy-agent: Kerio Control/7.1.1 build 1971\r\n\r\n";
     protected $fakeRawHeader = <<<HEADER

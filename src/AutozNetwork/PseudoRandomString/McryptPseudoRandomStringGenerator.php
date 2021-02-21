@@ -39,7 +39,7 @@ class McryptPseudoRandomStringGenerator implements PseudoRandomStringGeneratorIn
      */
     public function __construct()
     {
-        if (!function_exists('mcrypt_create_iv')) {
+        if (! function_exists('mcrypt_create_iv')) {
             throw new AutozNetworkSDKException(
                 static::ERROR_MESSAGE .
                 'The function mcrypt_create_iv() does not exist.'

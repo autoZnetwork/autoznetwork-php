@@ -30,7 +30,7 @@ class AutozNetworkUrlDetectionHandler implements UrlDetectionInterface
     /**
      * Tries to detect if the server is running behind an SSL.
      *
-     * @return boolean
+     * @return bool
      */
     protected function isBehindSsl()
     {
@@ -53,7 +53,7 @@ class AutozNetworkUrlDetectionHandler implements UrlDetectionInterface
      *
      * @param string $protocol
      *
-     * @return boolean
+     * @return bool
      */
     protected function protocolWithActiveSsl($protocol)
     {
@@ -78,8 +78,8 @@ class AutozNetworkUrlDetectionHandler implements UrlDetectionInterface
         if ($header && $this->isValidForwardedHost($header)) {
             $elements = explode(',', $header);
             $host = $elements[count($elements) - 1];
-        } elseif (!$host = $this->getHeader('HOST')) {
-            if (!$host = $this->getServerVar('SERVER_NAME')) {
+        } elseif (! $host = $this->getHeader('HOST')) {
+            if (! $host = $this->getServerVar('SERVER_NAME')) {
                 $host = $this->getServerVar('SERVER_ADDR');
             }
         }
@@ -147,7 +147,7 @@ class AutozNetworkUrlDetectionHandler implements UrlDetectionInterface
      *
      * @param string $header
      *
-     * @return boolean
+     * @return bool
      */
     protected function isValidForwardedHost($header)
     {

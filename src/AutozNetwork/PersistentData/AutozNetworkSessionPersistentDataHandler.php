@@ -19,7 +19,7 @@ class AutozNetworkSessionPersistentDataHandler implements PersistentDataInterfac
     /**
      * Init the session handler.
      *
-     * @param boolean $enableSessionCheck
+     * @param bool $enableSessionCheck
      *
      * @throws AutozNetworkSDKException
      */

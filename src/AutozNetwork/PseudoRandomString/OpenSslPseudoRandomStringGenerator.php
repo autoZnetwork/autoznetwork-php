@@ -39,7 +39,7 @@ class OpenSslPseudoRandomStringGenerator implements PseudoRandomStringGeneratorI
      */
     public function __construct()
     {
-        if (!function_exists('openssl_random_pseudo_bytes')) {
+        if (! function_exists('openssl_random_pseudo_bytes')) {
             throw new AutozNetworkSDKException(static::ERROR_MESSAGE . 'The function openssl_random_pseudo_bytes() does not exist.');
         }
     }
