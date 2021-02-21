@@ -17,22 +17,26 @@
     ],
     "require": {
         "php": "^7.4",
-        "guzzlehttp/guzzle": "~6.0",
         "ext-json": "*"
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^2.16",
+        "guzzlehttp/guzzle": "~6.0",
+        "mockery/mockery": "^1.4",
         "phpunit/phpunit": "^9.3",
         "vimeo/psalm": "^3.11"
     },
+    "suggest": {
+        "guzzlehttp/guzzle": "Allows for implementation of the Guzzle HTTP client"
+    },
     "autoload": {
         "psr-4": {
-            "AutozNetwork\\": "src"
+            "AutozNetwork\\": "src/AutozNetwork/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "AutozNetwork\\Tests\\": "tests"
+            "AutozNetwork\\Tests\\": "tests/"
         }
     },
     "scripts": {

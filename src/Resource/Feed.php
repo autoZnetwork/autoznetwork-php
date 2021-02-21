@@ -1,6 +1,6 @@
 <?php
 
-namespace AutozNetwork\Resource;
+namespace AutozNetwork\Rest;
 
 use AutozNetwork\ResourceBase;
 

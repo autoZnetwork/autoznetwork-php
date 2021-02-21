@@ -2,15 +2,15 @@
 
 namespace AutozNetwork;
 
-use AutozNetwork\Resource\Feed;
-use AutozNetwork\Resource\Inventory;
-use AutozNetwork\Resource\Location;
-use AutozNetwork\Resource\Organization;
-use AutozNetwork\Resource\Product;
-use AutozNetwork\Resource\User;
+use AutozNetwork\Rest\Feed;
+use AutozNetwork\Rest\Inventory;
+use AutozNetwork\Rest\Location;
+use AutozNetwork\Rest\Organization;
+use AutozNetwork\Rest\Product;
+use AutozNetwork\Rest\User;
 use InvalidArgumentException;
 
-class AutozNetwork
+class AutozNetworkOld
 {
     private $version;
     private string $apiKey;
